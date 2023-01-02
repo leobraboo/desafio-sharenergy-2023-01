@@ -2,9 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .btn-login {
-    @apply bg-red-600;
-  }
-
-}

@@ -1,6 +1,7 @@
 import { CmpHome } from "../../components/Home";
+import { SideBar } from "../../components/Home/SideBar";
 
-export function PageHome() {
+export function PageCats() {
   return (
     <>
       <CmpHome />
