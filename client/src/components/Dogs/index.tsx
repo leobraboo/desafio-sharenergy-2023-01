@@ -1,5 +1,5 @@
 import { GeneralHome } from "../Home/GeneralHome";
-import { SideBar } from "../Home/SideBar";
+import { SideBar } from "../Navegation";
 
 export function CmpHome() {
   return (
