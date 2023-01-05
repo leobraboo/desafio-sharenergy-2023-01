@@ -10,7 +10,7 @@ export function AppRoutes() {
       <Route path="/home" element={<PageHome/>}></Route>
       <Route path="/cats" element={<PageCats/>}></Route>
       <Route path="/dogs" element={<PageDogs/>}></Route>
-
+      <Route path="*" element={<PageHome/>}></Route>
     </Routes>
   )
 }

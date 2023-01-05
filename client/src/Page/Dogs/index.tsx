@@ -1,9 +1,11 @@
 import { CmpHome } from "../../components/Dogs";
+import { ApiDogs } from "../../services/useDogs";
+import { ApiUser } from "../../services/useRandom";
 
 export function PageDogs() {
   return (
-    <>
-      <CmpHome />
-    </>
+    <div>
+      <ApiDogs />
+    </div>
   )
 }
