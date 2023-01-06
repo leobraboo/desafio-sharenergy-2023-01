@@ -13,7 +13,7 @@ export function ApiUser() {
   useEffect(() => {
     fetch('https://randomuser.me/api/')
       .then(res => res.json())
-      .then(data => setUser(data.results[0]));
+      .then(data => setUser(data.results));
 
   }, []);
 

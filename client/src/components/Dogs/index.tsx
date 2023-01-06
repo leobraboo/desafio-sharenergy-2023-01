@@ -1,11 +1,11 @@
-import { GeneralHome } from "../Home/GeneralHome";
 import { SideBar } from "../Navegation";
+import { BodyGeneralDogs } from "./Body-general-dogs";
 
-export function CmpHome() {
+export function CmpDogs() {
   return (
     <div style={{ display:"flex" }}>
       <SideBar />
-      <GeneralHome />
+      <BodyGeneralDogs />
     </div>
   )
 }

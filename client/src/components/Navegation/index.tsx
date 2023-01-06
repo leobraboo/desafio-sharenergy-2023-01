@@ -13,7 +13,7 @@ export function SideBar() {
       <div style={{ width: open ? "13rem" : "3rem", transition: "ease-in 500ms", display: "flex", flexDirection: "row", justifyContent: "flex-end" }} onClick={() => setOpen(!open)}>
         <IoArrowForwardCircleOutline size={30} style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: "ease-in 500ms", color: "white" }} />
       </div>
-      <div style={{ display: "flex", flexDirection: "column", padding: "10px", gap: "10px", marginTop: "5rem" }} >
+      <div style={{ display: "flex", flexDirection: "column", padding: "5px", gap: "10px", marginTop: "4rem" }} >
         <ButtonSide as={Link} to="/cats">
           <GiCat size={25} style={{ marginRight: "10px" }} />
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Status Code</TextSide>
@@ -27,7 +27,7 @@ export function SideBar() {
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Cadastro</TextSide>
         </ButtonSide>
       </div>
-      <ButtonSide style={{ marginTop: "55vh" }} as={Link} to="/sair">
+      <ButtonSide style={{ marginTop: "50vh" }} as={Link} to="/sair">
           <GiExitDoor size={25} style={{ marginRight: "10px" }} />
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Sair</TextSide>
         </ButtonSide>

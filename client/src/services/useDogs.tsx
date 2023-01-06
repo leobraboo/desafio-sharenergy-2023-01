@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 
-type RandomDogs = {
-  src: Array<String>[];
-}
-
 export function ApiDogs() {
   const [dogs, setDogs] = useState<string>()
 

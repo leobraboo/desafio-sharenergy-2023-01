@@ -1,9 +1,11 @@
-import { CmpHome } from "../../components/Home";
+import { CmpCats } from "../../components/Cats";
+import { SideBar } from "../../components/Navegation";
 
 export function PageCats() {
   return (
-    <>
-      <CmpHome />
-    </>
+    <div style={{ display: "flex" }}>
+      <SideBar />
+      <CmpCats />
+    </div>
   )
 }
