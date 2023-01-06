@@ -27,7 +27,7 @@ export function SideBar() {
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Cadastro</TextSide>
         </ButtonSide>
       </div>
-      <ButtonSide style={{ marginTop: "50vh" }} as={Link} to="/sair">
+      <ButtonSide style={{ marginTop: "50vh" }} as={Link} to="/">
           <GiExitDoor size={25} style={{ marginRight: "10px" }} />
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Sair</TextSide>
         </ButtonSide>

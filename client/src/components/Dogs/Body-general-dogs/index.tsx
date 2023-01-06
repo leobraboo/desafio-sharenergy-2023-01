@@ -1,11 +1,15 @@
 import { ApiDogs } from "../../../services/useDogs";
+import { BtnDogs, ContainerDogs, Content } from "./styles";
 
 export function BodyGeneralDogs() {
   return (
-    <div style={{ width: "80vw", height: "70vh", background: "#121214", borderRadius: "1rem" }}>
-      <div style={{ display:"flex", flexDirection:"column", margin:"10px", gap:"10px" }}>
+    <ContainerDogs>
+      <BtnDogs>
+        <button>Clique para atualizar o Doguinho</button>
+      </BtnDogs>
+      <Content>
         <ApiDogs/>
-      </div>
-    </div>
+      </Content>
+    </ContainerDogs>
   )
 }
