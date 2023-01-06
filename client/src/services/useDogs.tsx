@@ -12,7 +12,7 @@ export function ApiDogs() {
 
   return (
     <div>
-        <img src={dogs} style={{ height:"60vh", width:"auto" }} />
+        <img src={dogs} style={{ height:"60vh", width:"100%" }} />
     </div>
   )
 

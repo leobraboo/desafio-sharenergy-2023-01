@@ -1,11 +1,13 @@
-import { BodyGeneralCats } from "./Body-general-cats";
-import { HeaderCats } from "./Header-cats";
+import { BodyCats } from "./Body-general-cats";
+import { ContainerCats, ContainerHead } from "./styles";
 
 export function CmpCats() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", width: "100vw", height: "100vh", background: "#212124", justifyContent: "center", alignItems: "center" }}>
-      <HeaderCats />
-      <BodyGeneralCats />
-    </div>
+    <ContainerCats >
+      <ContainerHead>
+        <h1>Escolha um STATUS CODE</h1>
+      </ContainerHead>
+      <BodyCats />
+    </ContainerCats>
   )
 }

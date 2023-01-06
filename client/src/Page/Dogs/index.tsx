@@ -1,9 +1,10 @@
 import { CmpDogs } from "../../components/Dogs";
-import { ApiDogs } from "../../services/useDogs";
+import { SideBar } from "../../components/Navegation";
 
 export function PageDogs() {
   return (
-    <div>
+    <div style={{ display: "flex" }}>
+      <SideBar />
       <CmpDogs />
     </div>
   )

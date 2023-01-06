@@ -1,11 +1,12 @@
-import { SideBar } from "../Navegation";
-import { GeneralHome } from "./GeneralHome";
+import { BodyGeneralHome } from "./GeneralHome/Body-general-home";
+import { HeaderGeneralHome } from "./GeneralHome/Header-general-home";
+import { ContainerHome } from "./styles";
 
 export function CmpHome() {
   return (
-    <div style={{ display:"flex" }}>
-      <SideBar />
-      <GeneralHome />
-    </div>
+    <ContainerHome>
+      <HeaderGeneralHome />
+      <BodyGeneralHome />
+    </ContainerHome>
   )
 }

@@ -1,11 +1,16 @@
+import { ApiDogs } from "../../services/useDogs";
 import { SideBar } from "../Navegation";
-import { BodyGeneralDogs } from "./Body-general-dogs";
+import { ContainerDogs, BtnDogs, Content } from "./styles";
 
 export function CmpDogs() {
   return (
-    <div style={{ display:"flex" }}>
-      <SideBar />
-      <BodyGeneralDogs />
-    </div>
+      <ContainerDogs>
+        <BtnDogs>
+          <button>Clique para atualizar o Doguinho</button>
+        </BtnDogs>
+        <Content>
+          <ApiDogs />
+        </Content>
+      </ContainerDogs>
   )
 }
