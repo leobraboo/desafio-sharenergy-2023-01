@@ -1,11 +1,13 @@
-import { BodyGeneralHome } from "./GeneralHome/Body-general-home";
-import { HeaderGeneralHome } from "./GeneralHome/Header-general-home";
-import { ContainerHome } from "./styles";
+import { BodyGeneralHome } from "./Body-general-home";
+import { BtnSearch, ContainerHead, ContainerHome, InputHeader } from "./styles";
 
 export function CmpHome() {
   return (
     <ContainerHome>
-      <HeaderGeneralHome />
+      <ContainerHead>
+        <InputHeader id="tex" name="text" type="text" />
+        <BtnSearch> Pesquisar </BtnSearch>
+      </ContainerHead>
       <BodyGeneralHome />
     </ContainerHome>
   )

@@ -1,5 +1,5 @@
 import { GiCat, GiSittingDog, GiArchiveRegister, GiExitDoor } from "react-icons/gi";
-import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { IoHome, IoArrowForwardCircleOutline } from "react-icons/io5";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -14,6 +14,10 @@ export function SideBar() {
         <IoArrowForwardCircleOutline size={30} style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: "ease-in 500ms", color: "white" }} />
       </div>
       <div style={{ display: "flex", flexDirection: "column", padding: "5px", gap: "10px", marginTop: "4rem" }} >
+        <ButtonSide as={Link} to="/home">
+          <IoHome size={25} style={{ marginRight: "10px" }} />
+          <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Home</TextSide>
+        </ButtonSide>
         <ButtonSide as={Link} to="/cats">
           <GiCat size={25} style={{ marginRight: "10px" }} />
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Status Code</TextSide>
@@ -22,15 +26,15 @@ export function SideBar() {
           <GiSittingDog size={25} style={{ marginRight: "10px" }} />
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Random Dogs</TextSide>
         </ButtonSide>
-        <ButtonSide as={Link} to="/cats">
+        <ButtonSide as={Link} to="/register">
           <GiArchiveRegister size={25} style={{ marginRight: "10px" }} />
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Cadastro</TextSide>
         </ButtonSide>
       </div>
-      <ButtonSide style={{ marginTop: "50vh" }} as={Link} to="/">
-          <GiExitDoor size={25} style={{ marginRight: "10px" }} />
-          <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Sair</TextSide>
-        </ButtonSide>
+      <ButtonSide style={{ marginTop: "40vh" }} as={Link} to="/">
+        <GiExitDoor size={25} style={{ marginRight: "10px" }} />
+        <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Sair</TextSide>
+      </ButtonSide>
     </Container>
   )
 }

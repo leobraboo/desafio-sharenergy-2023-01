@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export function CmpSignIn() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div style={{ width: "25rem", height: "30rem", justifyContent: "center", background: "#212124", borderRadius: "10px" }}>
       <div className="flex items-center justify-center">
@@ -9,7 +12,7 @@ export function CmpSignIn() {
             <img className="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-white">Faça Seu Login</h2>
           </div>
-          <form style={{ width:"20rem" }} className="mt-8 space-y-8">
+          <form style={{ width: "20rem" }} className="mt-8 space-y-8">
             <input type="hidden" name="remember" value="true" />
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
@@ -26,7 +29,7 @@ export function CmpSignIn() {
               </div>
             </div>
             <div>
-              <button  type="button" className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              <button type="button" className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                   <svg className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
@@ -39,6 +42,9 @@ export function CmpSignIn() {
               <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
             </div>
           </form>
+          <div style={{ background:"black" , color:"white", borderRadius:"10px" }} onClick={() => setOpen(!open)} >
+            <button type='button' className="bg-black py-2 px-4 text-sm flex w-full justify-center" >Cadastre-se</button>
+          </div>
         </div>
       </div>
     </div>

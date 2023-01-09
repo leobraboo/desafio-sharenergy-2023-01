@@ -10,10 +10,21 @@ justify-content: center;
 align-items: center;
 padding: 10px;
 gap: 10px;
-border: solid 1px #121214;
+border: solid 1px #4F4F4F;
+`
+export const InputHeader = styled.input`
+width: 100%;
+height: 2rem;
+border-radius: 0.5rem;
+background: #363636;
+color: white;
+
+:focus {
+  border: solid 1px red;
+}
 `
 
-export const BtnSearch = styled.div`
+export const BtnSearch = styled.button`
 display: flex;
 width: 10rem;
 height: 2rem;
@@ -22,6 +33,9 @@ align-items: center;
 background: #121214;
 border-radius: 0.5rem;
 color: whitesmoke;
+&:hover{
+  background: rgb(67,56,202);
+}
 `
 
 export const ContainerHome = styled.div`
