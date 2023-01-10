@@ -1,22 +1,23 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+import { useContext } from "react";
+import { LoginContext } from '../../../context/LoginContext';
+import fundo from '../../../assets/logoColor.png';
+
 
 export function CmpSignIn() {
-  const [open, setOpen] = useState(false);
-
+const { setopenSignIn, handleChange } = useContext(LoginContext) as { setopenSignIn: any, handleChange: React.ChangeEvent}
   return (
     <div style={{ width: "25rem", height: "30rem", justifyContent: "center", background: "#212124", borderRadius: "10px" }}>
       <div className="flex items-center justify-center">
         <div>
           <div>
-            <img className="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-white">Faça Seu Login</h2>
+            <img style={{ width:"200px", height:"100px" }} className="mx-auto h-12 w-auto" src={fundo} alt="Your Company" />
+            <h2 className="mt-1 text-center text-3xl font-bold tracking-tight text-white">Faça Seu Login</h2>
           </div>
           <form style={{ width: "20rem" }} className="mt-8 space-y-8">
-            <input type="hidden" name="remember" value="true" />
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
-                <input style={{ marginBottom: "0.5rem" }} id="email-address" name="email" type="email" required className="relative w-full rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address" />
+                <input  style={{ marginBottom: "0.5rem" }}  name="username" type="text" required className="relative w-full rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address" />
               </div>
               <div>
                 <input id="password" name="password" type="password" required className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Password" />
@@ -38,12 +39,9 @@ export function CmpSignIn() {
                 Login
               </button>
             </div>
-            <div className="text-sm flex w-full justify-center">
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
-            </div>
           </form>
-          <div style={{ background:"black" , color:"white", borderRadius:"10px" }} onClick={() => setOpen(!open)} >
-            <button type='button' className="bg-black py-2 px-4 text-sm flex w-full justify-center" >Cadastre-se</button>
+          <div style={{ background:"black" , color:"white", borderRadius:"10px" }}  >
+            <button onClick={() => setopenSignIn(true)} type='button' className="bg-black py-2 px-4 text-sm flex w-full justify-center" >Cadastre-se</button>
           </div>
         </div>
       </div>

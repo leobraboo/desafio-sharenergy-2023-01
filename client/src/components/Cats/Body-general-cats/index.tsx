@@ -99,15 +99,15 @@ export function BodyCats() {
       </ContainerBody>
       <FooterCats>
         <ContentFooter>
-          <div> <InfoLegends /> <span> Informational Responses </span> </div>
-          <div> <SucessLegends /> <span> Successful Responses </span></div>
+          <div> <InfoLegends /> <span> Informacional </span> </div>
+          <div> <SucessLegends /> <span> Sucesso </span></div>
         </ContentFooter>
         <ContentFooter>
-          <div> <RedirectLegends /> <span> Redirection Messages </span> </div>
+          <div> <RedirectLegends /> <span> Redirecionamento </span> </div>
         </ContentFooter>
-        <ContentFooter>
-          <div> <ClientLegends /> <span> Client error responses </span> </div>
-          <div> <ServerLegends /> <span> Server error responses </span> </div>
+        <ContentFooter style={{ alignItems:"center" }}>
+          <div> <ClientLegends /> <span> Client error </span> </div>
+          <div> <ServerLegends /> <span> Erro Servidor  </span> </div>
         </ContentFooter>
       </FooterCats>
     </>

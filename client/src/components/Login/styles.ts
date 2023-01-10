@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const ContainerLogin = styled.div`
-
+export const Teste =styled.div`
+background: red;
 `

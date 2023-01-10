@@ -23,7 +23,6 @@ display: flex;
 flex-direction: column;
 margin: 10px;
 gap: 10px;
-overflow-y: scroll;
 width: auto;
 max-height: 60vh;
 scrollbar-color: blue orange; 

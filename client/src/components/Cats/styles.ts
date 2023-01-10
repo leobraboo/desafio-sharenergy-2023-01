@@ -37,7 +37,7 @@ margin: 10px;
 gap: 10px;
 `
 
-export const LinksCats = styled.div`
+export const LinksCats = styled.button`
 width: 20%;
 height: 60px;
 display: flex;
@@ -50,7 +50,7 @@ font-weight: bold;
 color: whitesmoke;
 border-right: solid 2px red;
 `
-export const InfoLinks = styled.div`
+export const InfoLinks = styled.button`
 width: 20%;
 height: 60px;
 display: flex;
@@ -63,7 +63,7 @@ font-weight: bold;
 color: whitesmoke;
 border-right: solid 2px white;
 `
-export const RedirectionLinks = styled.div`
+export const RedirectionLinks = styled.button`
 width: 20%;
 height: 60px;
 display: flex;
@@ -76,7 +76,7 @@ font-weight: bold;
 color: whitesmoke;
 border-right: solid 2px blue;
 `
-export const SucessLinks = styled.div`
+export const SucessLinks = styled.button`
 width: 20%;
 height: 60px;
 display: flex;
@@ -90,7 +90,7 @@ color: whitesmoke;
 border-right: solid 2px green;
 `
 
-export const ServerLinks = styled.div`
+export const ServerLinks = styled.button`
 width: 20%;
 height: 60px;
 display: flex;
@@ -122,7 +122,6 @@ export const ContentFooter = styled.div`
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
-align-items: flex-start;
 justify-content: center;
 width: 33%;
 height: auto;

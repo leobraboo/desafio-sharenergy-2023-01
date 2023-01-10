@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Pagination, PaginationItem, UserContainer, UserContent } from "./styles";
-import { RandomUser } from "../../../@types/user";
-import randomConfig from "../../../services/apiUser";
+import { RandomUser } from "../../../@types/Randomuser";
+import { randomConfig } from "../../../services/apis";
 import { IoCaretBack, IoCaretForward } from "react-icons/io5";
 
 
@@ -24,13 +24,13 @@ export function BodyGeneralHome() {
     <Container>
       <div>
         <UserContainer>
-          {users?.map((roin) => (
-            <UserContent key={roin.name}>
-              <img style={{ borderRadius: "50px" }} src={roin.picture.thumbnail} />
-              <span>{`${roin.name.first} ${roin.name.last}`}</span>
-              <h1> {roin.email} </h1>
-              <span> {roin.login.username} </span>
-              <span> {roin.registered.age} </span>
+          {users?.map((random) => (
+            <UserContent key={random.id}>
+              <img style={{ borderRadius: "50px" }} src={random.picture.thumbnail} />
+              <span>{`${random.name.first} ${random.name.last}`}</span>
+              <h1> {random.email} </h1>
+              <span> {random.login.username} </span>
+              <span> {random.registered.age} </span>
             </UserContent>
           ))}
         </UserContainer>

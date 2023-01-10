@@ -16,7 +16,7 @@ width: 75vw;
 height: 35px;
 margin-bottom: 20px;
 `
-export const BtnRegister = styled.div`
+export const BtnRegister = styled.button`
 display: flex;
 justify-content: center;
 align-items: center;

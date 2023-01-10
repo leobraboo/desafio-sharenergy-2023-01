@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import apiDogs from "../../services/apiDogs";
+import { apiDogs } from "../../services/apis";
 import { ContainerDogs, BtnDogs, Content, ImgDogs } from "./styles";
 
 

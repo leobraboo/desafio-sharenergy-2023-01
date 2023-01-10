@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { UserContext } from '../../context/UserContext';
 import { BodyListUser } from "./BodyListUser";
 import { BodyRegisterUser } from "./BodyRegisterUser";
 import { BtnContent, BtnRegister, Container } from "./styles";
 
 export function CmpRegister() {
-  const [ registerU, setRegisterU ] = useState();
+  const { openRegister, setOpenRegister } = useContext(UserContext) as { openRegister: boolean, setOpenRegister: (value: boolean) => void }
   return (
     <>
       <Container>
         <BtnContent>
-          <BtnRegister> Imprimir lista</BtnRegister>
-          <BtnRegister> Novo Cliente</BtnRegister>
+          <BtnRegister onClick={window.print}> Imprimir lista</BtnRegister>
+          <BtnRegister onClick={() => setOpenRegister(true)} > Novo Cliente</BtnRegister>
         </BtnContent>
-        <BodyRegisterUser />
+        {openRegister ? <BodyRegisterUser /> : <BodyListUser />}
       </Container>
     </>
   )

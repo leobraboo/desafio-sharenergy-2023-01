@@ -74,7 +74,7 @@ width: 45vw;
 height: 35px;
 margin-bottom: 10px;
 `
-export const BtnFooterItem = styled.div`
+export const BtnFooterItem = styled.button`
 display: flex;
 justify-content: center;
 align-items: center;
