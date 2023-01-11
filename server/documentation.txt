@@ -1,0 +1,10 @@
+Pasta src/util/config: nessa pasta fica a configuração padrão de base url, utilizando o axios e ja passando o token no headers
+
+Pasta src/controllers: nessa pasta ficam os arquivos responsáveis por receber as informações, passar adiante e depois 
+retornam a resposta para o usuário, o arquivo index.js é onde fica as injeções de dependências
+
+Pasta src/routes: nessa pasta temos o arquivo index.js, onde fica os prefixos das rotas, e os demais arquivos são as rotas com os seus respectivos end points
+
+Pasta src/services: nessa pasta fica o tratamento dos dados e validações antes de serem passados adiante para o serviço externo.
+
+É necessário criar conta no https://www.mongodb.com/ para utilizar o banco , gerando o MONGU_URI dnetro do seu acesso no mongodb voce é capaz de configurar o .env

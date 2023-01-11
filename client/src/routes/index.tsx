@@ -4,6 +4,7 @@ import { PageDogs } from "../Page/Dogs";
 import { PageHome } from "../Page/Home";
 import { PageLogin } from "../Page/Login";
 import { PageRegisterUser } from "../Page/Register";
+
 export function AppRoutes() {
   return(
     <Routes>

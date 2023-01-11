@@ -8,10 +8,10 @@ interface AuxProps {
 const LoginContext = createContext({})
 
 function LoginProvider({children}: AuxProps) {
-  const { handleOpen, handleChange, openSignIn, setopenSignIn } = useLogin()
+  const { handleOpen, handleChange, saveLogin, handleSave, handleChangelogger, logger, openSignIn, setopenSignIn } = useLogin()
 
   return (
-    <LoginContext.Provider value={{ handleOpen, handleChange, openSignIn, setopenSignIn }}>
+    <LoginContext.Provider value={{ handleOpen, handleChange, handleChangelogger, saveLogin, handleSave, logger, openSignIn, setopenSignIn }}>
       {children}
     </LoginContext.Provider>
   )

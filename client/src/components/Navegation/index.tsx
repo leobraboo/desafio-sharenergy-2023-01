@@ -2,11 +2,16 @@ import { GiCat, GiSittingDog, GiArchiveRegister, GiExitDoor } from "react-icons/
 import { IoHome, IoArrowForwardCircleOutline } from "react-icons/io5";
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ButtonSide, Container, TextSide } from "./styles";
 
 export function SideBar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const deleteToken = () => {
+    sessionStorage.removeItem("token")
+    navigate("/")
+  }
 
   return (
     <Container  >
@@ -31,7 +36,7 @@ export function SideBar() {
           <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Cadastro</TextSide>
         </ButtonSide>
       </div>
-      <ButtonSide style={{ marginTop: "40vh" }} as={Link} to="/">
+      <ButtonSide onClick={deleteToken} style={{ marginTop: "40vh" }}>
         <GiExitDoor size={25} style={{ marginRight: "10px" }} />
         <TextSide style={{ fontSize: open ? "18px" : "0px", transition: "ease-in 500ms" }}>Sair</TextSide>
       </ButtonSide>

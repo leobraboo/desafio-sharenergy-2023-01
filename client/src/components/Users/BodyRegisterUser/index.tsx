@@ -14,7 +14,6 @@ export function BodyRegisterUser() {
     <>
       <Container>
         <ContentRegister>
-            <InputHeader hidden onChange={handleChange} defaultValue={user?._id || ""} name="id" type="text" />
           <InputContainer>
             <label>Nome</label>
             <InputHeader onChange={handleChange} defaultValue={user?.name || ""} name="name" type="text" />

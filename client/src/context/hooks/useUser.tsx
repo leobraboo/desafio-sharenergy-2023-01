@@ -89,7 +89,7 @@ export function UseUser() {
   }
 
   const handleSaveOrUpdate = async () => {
-    user?._id === "" ? saveUser() : updateUser()
+    user._id === undefined ? saveUser() : updateUser()
   }
 
   const clearInputs = () => {

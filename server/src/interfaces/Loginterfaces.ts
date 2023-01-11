@@ -5,7 +5,6 @@ export interface ILogin extends Document  {
   username : string
   email: string
   password: string
-
 }
 
 export interface ILoginModel extends Model<ILogin> { }

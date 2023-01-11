@@ -8,7 +8,6 @@ export class UserService {
   }
 
   async create(data: IUser): Promise<IUser> {
-    console.log(data)
     const result = await this.#userRepository.create(data)
     return result._id;
   }
